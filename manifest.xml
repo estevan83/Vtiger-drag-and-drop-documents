@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<module>
+<exporttime>2016-11-19 15:22:38</exporttime>
+<name>AlgDragDropDoc</name>
+<label>AlgDragDropDoc</label>
+<parent></parent>
+<type>extension</type>
+<version>1.2.0</version>
+<dependencies>
+<vtiger_version>6.0.0</vtiger_version>
+</dependencies>
+<tables>
+</tables>
+<crons>
+</crons>
+</module>
