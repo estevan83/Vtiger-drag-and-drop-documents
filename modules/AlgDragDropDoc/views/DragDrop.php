@@ -36,6 +36,10 @@ class AlgDragDropDoc_DragDrop_View extends Vtiger_Detail_View {
      * @param Vtiger_Request $request 
      */
     function process(Vtiger_Request $request) {
+        
+        if (!vtlib_isModuleActive('Documents')) {
+            throw new AppException(vtranslate('LBL_PERMISSION_DENIED', $moduleName));
+        }
 
         $viewer = $this->getViewer($request);
         $viewer->assign('MAXSIZE', AlgDragDropDoc_Module_Model::getMaxUploadSize());

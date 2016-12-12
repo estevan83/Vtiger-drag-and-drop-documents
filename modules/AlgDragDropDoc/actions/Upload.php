@@ -13,12 +13,13 @@ require_once('modules/Documents/Documents.php');
 class AlgDragDropDoc_Upload_Action extends Vtiger_Action_Controller {
 
 	public function checkPermission(Vtiger_Request $request) {
-		$moduleName = $request->getModule();
-                return true;
-
-		if(!Users_Privileges_Model::isPermitted($moduleName, 'DetailView', $request->get('record'))) {
-			throw new AppException(vtranslate('LBL_PERMISSION_DENIED', $moduleName));
-		}
+            $moduleName = $request->getModule();
+            if (!vtlib_isModuleActive('Documents')) {
+                throw new AppException(vtranslate('LBL_PERMISSION_DENIED', $moduleName));
+            }
+            if(!Users_Privileges_Model::isPermitted('Documents', 'EditView')) {
+                    throw new AppException(vtranslate('LBL_PERMISSION_DENIED', $moduleName));
+            }
 	}
 
 	public function process(Vtiger_Request $request) {
