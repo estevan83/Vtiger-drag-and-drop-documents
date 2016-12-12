@@ -11,11 +11,10 @@
  ********************************************************************************/
 
 $languageStrings = array(
-	// Basic Strings
-	'AlgDragDropDoc'        => 'AlgDragDropDoc',
-	'SINGLE_AlgDragDropDoc' => 'AlgDragDropDoc', 
-	'LBL_ALGDRAGDROPDOC_SETTINGS' => 'Impostazioni per la gestione del Drag and drop dei documenti',
-
+    
+        'AlgDragDropDoc' =>'Drag and drop dei documenti',
+        'LBL_ALGDRAGDROPDOC_SETTINGS' => 'Impostazioni moduli abilitati',
+	'SINGLE_AlgDragDropDoc' => 'Drag and drop dei documenti',
     
         'JS_FOLDERS' => 'Seleziona la cartella',
         'JS_UPLOAD_WARNING' => 'Problema nel caricamento',
